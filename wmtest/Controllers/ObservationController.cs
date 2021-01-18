@@ -323,7 +323,7 @@ namespace TrafficLight.Controllers
         }
 
 
-        // POST sequence/save
+        // POST observation/save
         [HttpPost]
         public async Task<IActionResult> Save()
         {
@@ -350,7 +350,7 @@ namespace TrafficLight.Controllers
         }
 
 
-        // POST sequence/load
+        // POST observation/load
         [HttpPost]
         public async Task<IActionResult> Load()
         {

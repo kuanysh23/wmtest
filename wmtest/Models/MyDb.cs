@@ -94,7 +94,7 @@ namespace TrafficLight.Models
         public async Task<string> SaveToFile()
         {
             try { 
-                FileStream fileStream = new FileStream(@"F:\Projects\wmtest\TrafficLightData.txt", FileMode.Create);
+                FileStream fileStream = new FileStream("TrafficLightData.txt", FileMode.Create);
                 using (StreamWriter writer = new StreamWriter(fileStream))
                 {
                     foreach (var entry in Data)
@@ -123,8 +123,8 @@ namespace TrafficLight.Models
         {
             try
             {
-                if (File.Exists(@"F:\Projects\wmtest\TrafficLightData.txt")) { 
-                    FileStream fileStream = new FileStream(@"F:\Projects\wmtest\TrafficLightData.txt", FileMode.Open);
+                if (File.Exists("TrafficLightData.txt")) { 
+                    FileStream fileStream = new FileStream("TrafficLightData.txt", FileMode.Open);
                     using (StreamReader reader = new StreamReader(fileStream))
                     {
                         string line = await reader.ReadLineAsync();
